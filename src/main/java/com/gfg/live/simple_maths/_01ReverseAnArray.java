@@ -1,5 +1,7 @@
 package com.gfg.live.simple_maths;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class _01ReverseAnArray {
@@ -10,6 +12,7 @@ public class _01ReverseAnArray {
 		int[] array = { 5, 2, 8, 4 };
 		reverseArray(array);
 		System.out.println(Arrays.toString(array));
+//		new ArrayList<>();
 
 	}
 
