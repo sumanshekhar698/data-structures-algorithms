@@ -1,4 +1,4 @@
-package com.dsa.company.microsoft;
+package company.microsoft.questions;
 
 public class _01Insert5ToMaximise {
 //	https://leetcode.com/discuss/interview-question/1329949/microsoft-online-assessment-question

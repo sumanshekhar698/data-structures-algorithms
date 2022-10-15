@@ -1,4 +1,4 @@
-package com.dsa.company.microsoft;
+package company.microsoft.questions;
 
 public class _02Delete5ToMaximise {
 	public static void main(String[] args) {

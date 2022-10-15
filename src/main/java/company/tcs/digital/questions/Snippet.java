@@ -1,4 +1,4 @@
-package com.tcs_digitl.questions;
+package company.tcs.digital.questions;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -15,7 +15,8 @@ public class SearchingIn2DarrayOptimized {
 		int n = x.length;//rows
 		int m = x[0].length;//columns
 		
-		int i = 0, j = x.length - 1;
+//		int i = 0, j = x.length - 1;
+		int i = 0, j = x[0].length - 1;
 
 //		Only applicable for fully sorted matrix
 //		O(n) = n + m = n
