@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DSA" />
+        <module name="DSA_Concepts" />
+        <module name="Data_Structures_Algorithms" />
       </profile>
     </annotationProcessing>
   </component>
