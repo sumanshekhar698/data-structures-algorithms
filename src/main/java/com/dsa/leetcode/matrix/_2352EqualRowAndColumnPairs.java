@@ -3,7 +3,7 @@ package com.dsa.leetcode.matrix;
 import java.util.HashMap;
 
 public class _2352EqualRowAndColumnPairs {
-
+//https://leetcode.com/problems/equal-row-and-column-pairs/
 
     public static void main(String[] args) {
         Solution solution = new Solution();
@@ -19,6 +19,8 @@ public class _2352EqualRowAndColumnPairs {
 
     static class Solution {
         public int equalPairs(int[][] grid) {
+            //O(n^2) time
+            //O(n) space
             HashMap<String, Integer> record = new HashMap<>();//it will store the rows with its frequency
 
             int rows = grid.length;

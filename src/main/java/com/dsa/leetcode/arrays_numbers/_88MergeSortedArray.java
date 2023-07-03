@@ -29,11 +29,7 @@ public class _88MergeSortedArray {
                 result[k++]=nums1[j];
                 ++j;
             }
-
         }
-
         System.out.println(Arrays.toString(result));
-
-
     }
 }
