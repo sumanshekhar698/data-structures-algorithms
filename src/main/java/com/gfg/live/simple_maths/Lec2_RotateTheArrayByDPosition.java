@@ -27,32 +27,33 @@ public class Lec2_RotateTheArrayByDPosition {
     }
 
     private static void rotateTheArrayClockWiseLinearTimeHighestOptimization(int[] x, int n) {
-//        Step 1 - 12345 6789 ---> 54321 6789
+//        Reversal
+//        Step 1 - 12345 6789 ---> 54321 6789 n=5
 //
 //        Step 2 - 54321 6789 ---> 54321 9876
 //
-//        Step 3 - 543219876 ---> 678912345
+//        Step 3 - 54321 9876 ---> 678912345
     }
 
-    private static void rotateTheArrayClockWiseLinearTime(int[] x, int n) {
+    private static void rotateTheArrayClockWiseLinearTime(int[] x, int b) {
 //        O(n) =steps +  (n- steps) + steps = n+ steps = n
-        n = n % x.length;//bifurcation index from end  of the final array
+        b = b % x.length;//bifurcation index from end  of the final array
 
 
-        int[] backupArray = new int[n];
+        int[] backupArray = new int[b];
         int j;
 
 //       step 1
         int m = 0;
-        for (int i = x.length - n; i < x.length; i++) {//Taking backup of last n _elements  part from bifurcation
+        for (int i = x.length - b; i < x.length; i++) {//Taking backup of last b elements  part from bifurcation
             backupArray[m++] = x[i];
         }
 
         System.out.println(Arrays.toString(backupArray));
 
 //        step 2
-        for (j = x.length - n - 1; j >= 0; j--) {//shifting the second half of the bifurcation towards starting left
-            x[j + n] = x[j];
+        for (j = x.length - 1 - b; j >= 0; j--) {//shifting the second half of the bifurcation towards starting left
+            x[j + b] = x[j];
         }
 
 
