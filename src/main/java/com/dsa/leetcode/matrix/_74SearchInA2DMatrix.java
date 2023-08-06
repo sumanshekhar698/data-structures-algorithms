@@ -1,7 +1,7 @@
 package com.dsa.leetcode.matrix;
 
-public class SearchInAfullySortedMatrix {
-
+public class _74SearchInA2DMatrix {
+//	https://leetcode.com/problems/search-a-2d-matrix/submissions/
 	public static void main(String[] args) {
 
 		int item = 29;

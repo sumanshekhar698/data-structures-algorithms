@@ -9,7 +9,9 @@ public class _238ProductOfArrayExceptSelf {
 
         int[] nums = {1, 2, 3, 4};
         int[] nums2 = {-1, 1, 0, -3, 3};
-        int[] ints = new Solution().productExceptSelf(nums);
+        int[] nums3 = {3, 6, 5, 2, 1};
+
+        int[] ints = new Solution().productExceptSelfLinear(nums);
         System.out.println(Arrays.toString(ints));
     }
 
@@ -51,6 +53,7 @@ public class _238ProductOfArrayExceptSelf {
 //            time O(n)*3
 //            space O(n)*3
 
+            //{1, 2, 3, 4};
             int n = nums.length;
             int prefix[] = new int[n];//prefix Multiple
             int suffix[] = new int[n];//suffix multiple
@@ -58,7 +61,7 @@ public class _238ProductOfArrayExceptSelf {
 
             //Prefix   {1,2,6,24}
             //Nums     {2,3,4,5}
-            //Suffix   {0,20,5,1}
+            //Suffix   {60,20,5,1}
 
             prefix[0] = 1;
             suffix[n - 1] = 1;
@@ -79,6 +82,12 @@ public class _238ProductOfArrayExceptSelf {
             for (int i = 0; i < n; i++) {
                 result[i] = prefix[i] * suffix[i];
             }
+
+
+
+            System.out.println("PRE => " + Arrays.toString(prefix));
+            System.out.println("SUF => " + Arrays.toString(suffix));
+            System.out.println("MUL RES=> " + Arrays.toString(result));
 
             return result;
         }
