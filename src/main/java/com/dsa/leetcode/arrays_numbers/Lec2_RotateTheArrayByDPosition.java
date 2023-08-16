@@ -1,4 +1,4 @@
-package com.gfg.live.simple_maths;
+package com.dsa.leetcode.arrays_numbers;
 
 import java.util.Arrays;
 

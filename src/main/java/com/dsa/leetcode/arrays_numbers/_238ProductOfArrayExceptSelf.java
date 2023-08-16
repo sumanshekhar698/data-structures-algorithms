@@ -7,11 +7,11 @@ public class _238ProductOfArrayExceptSelf {
 
     public static void main(String[] args) {
 
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = {2, 3, 4, 5};
         int[] nums2 = {-1, 1, 0, -3, 3};
         int[] nums3 = {3, 6, 5, 2, 1};
 
-        int[] ints = new Solution().productExceptSelfLinear(nums);
+        int[] ints = new Solution().productExceptSelf(nums);
         System.out.println(Arrays.toString(ints));
     }
 
@@ -28,14 +28,15 @@ public class _238ProductOfArrayExceptSelf {
             int result[] = new int[n];
             result[0] = 1;
 
-//            Nums   {5, 2, 6, 4}
-//            Result {1, 5, 10, 60}
+//            Nums   {2, 3, 4, 5}
+//            Result {1, 2, 6, 24}
 
-            //left pass
+            //left pass kinda prefix array
             for (int i = 1; i < n; i++) {
                 tempProduct *= nums[i - 1];
                 result[i] = tempProduct;
             }
+//            System.out.println(Arrays.toString(result));
 
             tempProduct = 1;
             //right pass
@@ -59,9 +60,14 @@ public class _238ProductOfArrayExceptSelf {
             int suffix[] = new int[n];//suffix multiple
             int result[] = new int[n];
 
-            //Prefix   {1,2,6,24}
-            //Nums     {2,3,4,5}
-            //Suffix   {60,20,5,1}
+
+//            Prefix     {1,    2,   6,    24}
+//                       {1 | 1*2 | 2*3 | 2*3*4}
+
+//            Original Nums Array    {2,3,4,5}
+
+//            Suffix    {   60,      20,    5,    1}
+//                      {1*5*4*3 | 1*5*4 | 1*5 | 1}
 
             prefix[0] = 1;
             suffix[n - 1] = 1;
@@ -82,7 +88,6 @@ public class _238ProductOfArrayExceptSelf {
             for (int i = 0; i < n; i++) {
                 result[i] = prefix[i] * suffix[i];
             }
-
 
 
             System.out.println("PRE => " + Arrays.toString(prefix));
