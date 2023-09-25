@@ -14,6 +14,8 @@ public class _25ReverseNodesInKGroup {
     }
 
 
+
+    static ListNode th = null, tt = null;
     //Easiest and Simplest
     public static ListNode reverseKGroupRajnishPepCoding(ListNode head, int k) {
         if (head == null || head.next == null || k == 1)
@@ -48,10 +50,9 @@ public class _25ReverseNodesInKGroup {
         ot.next = curr;
         return oh;
 
-
     }
 
-    static ListNode th = null, tt = null;
+
 
     public static void addNodeAtStart(ListNode node) {
         if (th == null) {
