@@ -36,7 +36,7 @@ public class _92ReverseLinkedListII {
 
 //        Phase::2 reversal L-R
         ListNode prev = null;
-        for (int i = 1; i <= right - left + 1; i++) {
+        for (int i = 1; i <= right - left + 1; i++) {//+1 because we have to break one extra link at the end
             ListNode temp = curr.next;
             curr.next = prev;
             prev = curr;
