@@ -1,4 +1,4 @@
-package com.dsa.leetcode.arrays_numbers;
+package com.dsa.leetcode.hashing;
 
 import java.util.HashMap;
 

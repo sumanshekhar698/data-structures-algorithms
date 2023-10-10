@@ -60,7 +60,7 @@ public class _88MergeSortedArray_E {
         System.out.println(Arrays.toString(nums1) + Arrays.toString(nums2));
     }
 
-    //TO DO
+    //TODO
     public static void mergeAndFillVariationUsingInsertionSort(int[] nums1, int[] nums2) {//variation
 
         //O( m + n ) = time m for traversal and say n for reordering nums2 (conditoned all the elements in nums1 are greater than nums2)| O(1) space

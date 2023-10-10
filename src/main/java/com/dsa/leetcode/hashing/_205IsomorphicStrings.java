@@ -5,7 +5,6 @@ import java.util.HashMap;
 public class _205IsomorphicStrings {
 
     public static void main(String[] args) {
-
         boolean isomorphic = isIsomorphicOptimizedViaOneHashMap("paper", "title");
         System.out.println(isomorphic);
     }
