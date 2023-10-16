@@ -16,6 +16,8 @@ public class _26RemoveDuplicatesFromSortedArray {
 //        if (nums.length == 0) //commented thsi line as the question says there will be ATLEAST one element
 //            return 0;
 
+//        Time O(n) = n
+//        Space O(n) = 1
         int counter = 1;//as a single element is always unique and hence the answer will be 1
         int current = nums[0];//string the 1st element in the current
 
