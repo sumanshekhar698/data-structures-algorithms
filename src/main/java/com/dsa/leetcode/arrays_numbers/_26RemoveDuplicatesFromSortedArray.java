@@ -13,19 +13,18 @@ public class _26RemoveDuplicatesFromSortedArray {
     }
 
     static public int removeDuplicates(int[] nums) {
-//        if (nums.length == 0) //commented thsi line as the question says there will be ATLEAST one element
+//        if (nums.length == 0) //commented this line as the question says there will be ATLEAST one element
 //            return 0;
 
 //        Time O(n) = n
 //        Space O(n) = 1
         int counter = 1;//as a single element is always unique and hence the answer will be 1
-        int current = nums[0];//string the 1st element in the current
+        int previous = nums[0];//storing the 1st element in the previous
 
         for (int i = 1; i < nums.length; i++) {
-            if (current != nums[i]) {
-                nums[counter] = nums[i];
-                current = nums[i];
-                counter++;
+            if (previous != nums[i]) {
+                nums[counter++] = nums[i];
+                previous = nums[i];
             }
         }
         return counter;
