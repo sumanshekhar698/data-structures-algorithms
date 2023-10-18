@@ -24,39 +24,9 @@ public class _27RemoveElement {
             return count;
         }
 
-        public int removeElementWRONG(int[] nums, int val) {
+      
 
-            int counter = 0;
-            for (int i = 0; i < nums.length; i++) {
-                if (nums[i] == val) {
-                    ++counter;
-                    nums[i] = -1;
-                }
-
-            }
-
-
-            int ans = counter;
-
-
-            for (int i = 0; i < nums.length; ) {
-                if (nums[i] == -1 && i != nums.length - 1) {
-                    int j = i;
-                    while (j < nums.length - 1) {
-                        nums[j] = nums[j + 1];
-                        nums[j + 1] = -1;
-                        ++j;
-                    }
-                }
-                if (nums[i] == -1 && i < nums.length - counter) {
-                    continue;
-                }
-                i++;
-            }
-
-            return ans;
-        }
-    }
+}
 
 }
 
