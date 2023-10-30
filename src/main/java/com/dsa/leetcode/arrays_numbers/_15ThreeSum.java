@@ -24,7 +24,7 @@ public class _15ThreeSum {
             for (int j = i + 1; j < nums.length; j++) {
                 for (int k = j + 1; k < nums.length; k++) {
 
-//                  CONDITON  nums[i] + nums[j] + nums[k] == 0.
+//                  CONDITION  nums[i] + nums[j] + nums[k] == 0.
                     if (nums[i] + nums[j] + nums[k] == 0) {
                         List<Integer> temp = new ArrayList<>();
                         temp.add(nums[i]);
@@ -108,7 +108,7 @@ public class _15ThreeSum {
 
 //        i j k should be in the same order i < j < k
         for (int i = 0; i < nums.length; i++) {//O(n) = n
-            if (i > 0 && nums[i] == nums[i - 1])// first element has no previous, and we are checking the previous for all the non-1st element as we want unique triplets and this array we have already sorted.
+            if (i > 0 && nums[i] == nums[i - 1])// the first element has no previous, and we are checking the previous for all the non-1st element as we want unique triplets and this array we have already sorted.
                 continue;
             int j = i + 1;
             int k = nums.length - 1;
@@ -127,14 +127,14 @@ public class _15ThreeSum {
                     j++;
                     k--;
 
-                    while (j < k && nums[j] == nums[j - 1])//time for these 2 while can be ignored as they are extension of teh outer while
+                    while (j < k && nums[j] == nums[j - 1])//time for these 2 whiles can be ignored as they are extension of the outer while
                         j++;// boundary condition and duplicates skipping if there are
                     while (j < k && nums[k] == nums[k + 1])
                         k--;// boundary condition and duplicates skipping if there are
                 } else if (tempSum < 0) {//we have to increase the sum
-                    j++;//as the array is sorted in ascending order and going forward will increase the sum
+                    j++;//as the array is sorted in ascending order and going forward, will increase the sum
                 } else {//(tempSum > 0)  | we have to decrease the sum
-                    k--;//as the array is sorted in ascending order and going backward will decrease the sum
+                    k--;//as the array is sorted in ascending order, and going backward will decrease the sum
                 }
 
             }

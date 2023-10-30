@@ -1,4 +1,4 @@
-package com.dsa.trees.bst;
+package com.dsa.leetcode.trees.bst;
 
 import java.util.*;
 
@@ -40,7 +40,7 @@ public class _104MaximumDepthOfBinaryTree {
             if (root == null)//base condition
                 return 0;
 
-//            if we have one node with no left and right so we can say the maxDepth = 1 + max(Left sub tree, Right sub tree)
+//            if we have one node with no left and right, so we can say the maxDepth = 1 + max(Left sub tree, Right sub tree)
             return 1 + Math.max(maxDepthRecursiveDFS(root.left), maxDepthRecursiveDFS(root.right));
 
         }
@@ -52,8 +52,8 @@ public class _104MaximumDepthOfBinaryTree {
 //            if (root == null) //commenting as the if condition will handle this
 //                return 0;
 
-            Deque<Map.Entry<TreeNode, Integer>> stackQueue = new ArrayDeque<>();
-            stackQueue.addLast(new AbstractMap.SimpleEntry<>(root, 1));
+            Deque<Map.Entry<TreeNode, Integer>> stackQueue = new ArrayDeque<>();//We will be needing a Stack DS to emulate CallStack
+            stackQueue.addLast(new AbstractMap.SimpleEntry<>(root, 1));//K:V :: Node:Depth
 //            int depth = 1; // as we commented the above if block
             int depth = 0;
 
@@ -74,22 +74,22 @@ public class _104MaximumDepthOfBinaryTree {
         }
 
 
-        public int maxDepthBFS(TreeNode root) {//Level Order Traversal
+        public int maxDepthBFS(TreeNode root) {//Iterative Level Order Traversal
 
-//            basically we will count the number of levels
+//            basically, we will count the number of levels
 //            O(n) ::  n => n is the number of nodes
             if (root == null)
                 return 0;
 
 
-            Queue<TreeNode> queue = new LinkedList();
+            Queue<TreeNode> queue = new LinkedList();//Generally BFS involves a queue or a dequeue
             queue.add(root);
 
             int depthLevel = 0;
             while (!queue.isEmpty()) {
 
 
-                int size = queue.size();//taking teh snapshot of the current queue length
+                int size = queue.size();//taking a snapshot of the current queue length
                 for (int i = 0; i < size; i++) {//at each for it will keep on adding the nodes of that level
 
                     TreeNode node = queue.poll();

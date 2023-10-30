@@ -1,4 +1,4 @@
-package com.dsa.trees.bst;
+package com.dsa.leetcode.trees.bst;
 
 public class _543DiameterOfBinaryTree {
     //    https://leetcode.com/problems/diameter-of-binary-tree/description/
