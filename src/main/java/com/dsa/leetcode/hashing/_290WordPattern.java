@@ -22,11 +22,11 @@ public class _290WordPattern {
 
         for (int i = 0; i < pattern.length(); i++) {//traversing via all the pattern chars
             if (map.containsKey(pattern.charAt(i))) {
-                if (!map.get(pattern.charAt(i)).equals(split[i]))//If a char is mappe to some otehr String
+                if (!map.get(pattern.charAt(i)).equals(split[i]))//If a char is mapped to some other String
                     return false;
             } else if ((map.containsValue(split[i]))) {//if the current String is already mapped to a char
                 return false;
-            } else {//else create a entry of K:V
+            } else {//else create an entry of K:V
                 map.put((pattern.charAt(i)), (split[i]));
             }
 
