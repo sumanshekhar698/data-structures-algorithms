@@ -16,7 +16,7 @@ public class _383RansomNote {
             map.put(ransomNote.charAt(i), map.getOrDefault(ransomNote.charAt(i), 0) + 1);
         }
 
-        for (int i = 0; i < magazine.length(); i++) {//Deriching teh same map
+        for (int i = 0; i < magazine.length(); i++) {//Deriching the same map
             if (map.containsKey(magazine.charAt(i))) {
                 if (map.get(magazine.charAt(i)) != 1) {
                     map.put(magazine.charAt(i), map.get(magazine.charAt(i)) - 1);
