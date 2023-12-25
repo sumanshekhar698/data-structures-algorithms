@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 class _347TopKFrequentElements {
 
 
-    public int[] topKFrequentOtimzedViaPriorityQueue(int[] nums, int k) {
+    public int[] topKFrequentOptimizedViaPriorityQueue(int[] nums, int k) {
         Map<Integer, Integer> m1 = new HashMap<Integer, Integer>();
 
         // Count the frequency of each number
