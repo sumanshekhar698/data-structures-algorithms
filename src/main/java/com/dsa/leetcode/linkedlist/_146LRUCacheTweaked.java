@@ -48,7 +48,7 @@ class _146LRUCacheTweaked {//LeastRecentlyUsed Cache
 
             //updating the DLL to make aligned to MRU
             remove(cacheMap.get(key));//will only remove from the DLL
-            insertAtRight(cacheMap.get(key));//add teh same removed node to the DLL
+            insertAtRight(cacheMap.get(key));//add the same removed node to the DLL
 
         } else {//if the node is not existent
             ++size;
@@ -57,7 +57,7 @@ class _146LRUCacheTweaked {//LeastRecentlyUsed Cache
             insertAtRight(node);//making it mru
 
             //After adding a new node, we are checking for capacity overflow
-            if (size > this.capacity) {//eviction tweaked
+            if (size > this.capacity) {//eviction TWEAKED
                 Node next2lruNode = lru.next;//1. removing from DLL
                 remove(next2lruNode);
                 this.cacheMap.remove(next2lruNode.key);//remove from cacheMap;

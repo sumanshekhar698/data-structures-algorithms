@@ -15,31 +15,31 @@ class _146LRUCache {//LeastRecentlyUsed Cache
     Node lru;
     Node mru;
 
-    public _146LRUCache(int capacity) {
+    public _146LRUCache(int capacity) {//TODO
         this.capacity = capacity;
         this.cacheMap = new HashMap<>();
 
         this.lru = new Node(0, 0);
         this.mru = new Node(0, 0);
 
-        this.lru.next = this.mru;//lru[0,0] <=> mru[0,0]
+        this.lru.next = this.mru;//lru[0,0] <=> mru[0,0]  INITIAL STATE
         this.mru.prev = this.lru;
 
 
     }
 
-    public int get(int key) {
+    public int get(int key) {//TODO
         if (cacheMap.containsKey(key)) {
 
             //updating the DLL to make aligned to MRU
             remove(cacheMap.get(key));//will only remove from the DLL
-            insertAtRight(cacheMap.get(key));//add teh same removed node to the DLL
+            insertAtRight(cacheMap.get(key));//add the same removed node to the DLL
             return cacheMap.get(key).value;//getting NODE corresponding to the key & then getting the value
         }
         return -1;
     }
 
-    public void put(int key, int value) {
+    public void put(int key, int value) {//TODO
         if (cacheMap.containsKey(key)) {
 
             cacheMap.get(key).value = value;//updating the value of the existing Node
@@ -54,7 +54,7 @@ class _146LRUCache {//LeastRecentlyUsed Cache
             insertAtRight(node);//making it mru
         }
 
-        //After adding a new node or updating the existing node
+        //After adding a new node or updating the existing node we are refreshing out cache
         if (this.cacheMap.size() > this.capacity) {//eviction
             Node node = lru.next;//1. removing from DLL
             remove(node);
@@ -63,8 +63,14 @@ class _146LRUCache {//LeastRecentlyUsed Cache
 
     }
 
-//    helper fn
 
+/**
+ * @param node removes node from the linked list
+ * @return Nothing.
+ *
+*/
+
+//LINKED LIST FUNCTIONS
     void remove(Node node) {
 
 //        prevNode <=> node <=> nextNode
@@ -76,6 +82,11 @@ class _146LRUCache {//LeastRecentlyUsed Cache
         nextNode.prev = prevNode;
     }
 
+    /**
+     * @param node inserts the node at the end of the dll just befor the mru node
+     * @return Nothing.
+     *
+     */
     void insertAtRight(Node node) {
         //NOTE: it will insert just before the mru node
 
