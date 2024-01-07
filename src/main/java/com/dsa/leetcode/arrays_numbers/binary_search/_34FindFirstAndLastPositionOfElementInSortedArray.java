@@ -6,11 +6,11 @@ public class _34FindFirstAndLastPositionOfElementInSortedArray {
 
     public static void main(String[] args) {
         int[] nums = {5, 7, 7, 8, 8, 10};
-        System.out.println(Arrays.toString(searchRange(nums, 7)));
+        System.out.println(Arrays.toString(searchRangeOptimized(nums, 7)));
 
     }
 
-    static public int[] searchRange(int[] nums, int target) {
+    static public int[] searchRangeNaive(int[] nums, int target) {
         int i = 0;
         int j = nums.length - 1;
 
@@ -38,4 +38,51 @@ public class _34FindFirstAndLastPositionOfElementInSortedArray {
 
         return new int[]{-1, -1};
     }
+
+    static public int[] searchRangeOptimized(int[] nums, int target) {
+        if (nums == null || nums.length == 0) return new int[]{-1, -1};
+        int firstOccurence = getFirstOccurence(nums, target);
+        if (firstOccurence == -1)
+            return new int[]{-1, -1};
+        int lastOccurence = getLastOccurence(nums, target);
+        return new int[]{firstOccurence, lastOccurence};
+    }
+
+    static private int getFirstOccurence(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length - 1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (nums[mid] > target) {
+                high = mid - 1;
+            } else if (nums[mid] < target) {
+                low = mid + 1;
+            } else {
+                if (mid == 0 || nums[mid] != nums[mid - 1])
+                    return mid;
+                else high = mid - 1;
+
+            }
+        }
+        return -1;
+    }
+
+    static private int getLastOccurence(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length - 1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (nums[mid] > target) {
+                high = mid - 1;
+            } else if (nums[mid] < target) {
+                low = mid + 1;
+            } else {
+                if (mid == nums.length - 1 || nums[mid] != nums[mid + 1]) return mid;
+                else low = mid + 1;
+
+            }
+        }
+        return -1;
+    }
+
 }

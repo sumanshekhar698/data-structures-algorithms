@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class _23MergeKSortedLists {
+public class _23MergeKSortedLists {//This can also be done with a priority queue
+
     public static void main(String[] args) {
 
     }
