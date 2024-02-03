@@ -1,4 +1,4 @@
-package com.hackerrank.algorithms.problemsolving.easy;
+package com.companies;
 
 /*A coding competition is being
 organized on the HackerRank

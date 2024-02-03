@@ -26,7 +26,7 @@ public class _70ClimbingStairs {
             dp[i] = dp[i + 1] + dp[i + 2];
         }
 
-        System.out.println(Arrays.toString(dp));//[8, 5, 3, 2, 1, 1] Basically its a fibonacci, we can further space
+        System.out.println(Arrays.toString(dp));//[8, 5, 3, 2, 1, 1] Basically its fibonacci, we can further space
         return dp[0];
 
     }

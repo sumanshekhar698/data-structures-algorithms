@@ -38,8 +38,8 @@ public class _1143LongestCommonSubsequence {
     static public String longestCommonSubsequenceString(String text1, String text2) {
         String[][] dp = new String[text1.length() + 1][text2.length() + 1];//Bottom Up approach DP
         //So we're adding one extra row column to look diagonally if the last car matches
-        Arrays.fill(dp[dp.length - 1], "");
-        for (int i = 0; i < dp.length - 1; i++) {
+        Arrays.fill(dp[dp.length - 1], "");//filling the last row with empty strings
+        for (int i = 0; i < dp.length - 1; i++) {//filling the last column with empty strings
             dp[i][dp[0].length - 1] = "";
         }
 
@@ -49,7 +49,7 @@ public class _1143LongestCommonSubsequence {
                 if (text1.charAt(i) == text2.charAt(j)) {
                     dp[i][j] = "" + text1.charAt(i) + dp[i + 1][j + 1];//when the char matches we look diagonal
                 } else {
-                    dp[i][j] = dp[i][j + 1].length() > dp[i + 1][j].length() ? dp[i][j + 1] : dp[i + 1][j];
+                    dp[i][j] = dp[i][j + 1].length() > dp[i + 1][j].length() ? dp[i][j + 1] : dp[i + 1][j];//when the char does not match we look for the max length string
 
                 }
 

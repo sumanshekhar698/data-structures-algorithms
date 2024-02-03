@@ -21,7 +21,7 @@ public class ReverselinkedList {
 
         while (curr != null) {
             next = curr.next;//save next
-            curr.next = prev;//revrese the link
+            curr.next = prev;//reverse the link
 
             // advancing prev & curr
             prev = curr;

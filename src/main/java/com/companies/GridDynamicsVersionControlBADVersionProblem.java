@@ -1,6 +1,4 @@
-package com.hackerrank.algorithms.problemsolving.easy;
-
-import java.util.Random;
+package com.companies;
 
 
 class VersionControl {
@@ -18,11 +16,11 @@ class VersionControl {
         }
         return false;
     }
-    
+
 
 }
 
-class VersionControlBADVersionProblem extends VersionControl {
+class GridDynamicsVersionControlBADVersionProblem extends VersionControl {
     public int firstBadVersion(int n) {//TODO  1 to n
 
 
