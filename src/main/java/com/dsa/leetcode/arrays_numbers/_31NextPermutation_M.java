@@ -6,13 +6,14 @@ public class _31NextPermutation_M {
 
     public static void main(String[] args) {
 
-        int[] arr1 = {1, 3, 5, 4, 2};
         int[] arr1_1 = {1, 3, 5, 4, 2};
+        int[] arr1 = {1, 3, 5, 4, 2};
+        int[] arr0 = {1, 2, 3};//lexicographic series {1, 2, 3} [1 3 2]☑️, [2 1 3 ],[2 3 1], [ 3 1 2], [3 2 1]
         int[] arr2 = {1, 2, 3, 4, 5};
         int[] arr3 = {5, 4, 3, 2, 1};
         int[] arr4 = {5, 4, 3, 2, 1};
 
-        nextPermutation(arr1_1);
+        nextPermutation(arr0);
         System.out.println(Arrays.toString(arr1_1));
 
         nextPermutation(arr1);
@@ -21,7 +22,7 @@ public class _31NextPermutation_M {
 
     }
 
-    public static void nextPermutation(int[] nums) {
+    public static void nextPermutation(int[] nums) {//one swap and sort the remaining
 //        O(3n) ~ O(n) time
 //        O(1) space
 
@@ -37,23 +38,24 @@ public class _31NextPermutation_M {
             }
         }
 
-        if (index1 != -1)
+        if (index1 != -1) {//if we found an index1 (we will not find an index1 when the array is in descending order)
             for (int i = nums.length - 1; i > index1; i--) {
                 if (nums[i] > nums[index1]) {
-                    index2 = i;
+                    index2 = i;//we want a number just bigger that index1
 //                System.out.println(nums[index2]);
                     break;
                 }
             }
+        }
 
 //        System.out.println(index1 + "  | " + index2);
         if (index1 != -1)
-            swap(nums, index1, index2);
+            swap(nums, index1, index2);//swapping the index1 and index2
 
         if (index1 != -1)
-            reverse(nums, index1 + 1, nums.length - 1);
+            reverse(nums, index1 + 1, nums.length - 1);//reversing will sort it
         else
-            reverse(nums, 0, nums.length - 1);
+            reverse(nums, 0, nums.length - 1);//descending order to ascending order ---> sorting the whole array
 
 
     }
