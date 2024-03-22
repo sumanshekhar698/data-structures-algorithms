@@ -25,14 +25,14 @@ public class _84LargestRectangleInHistogram {
             while (!stack.isEmpty() && heights[i] < stack.peekLast().val) {
                 Pair pop = stack.pollLast();
                 maxArea = Integer.max(maxArea, pop.val * (i - pop.index));
-                start = pop.index;//since we know that the current element is smaller than a popped element, we can make out start little back to the popped index
+                start = pop.index;//since we know that the current element is smaller than a popped element, we can extend out start little backward to the popped index
             }
             stack.add(new Pair(start, heights[i]));
 
         }
 
 
-        //Some elements mighr remain in the stack
+        //Some elements might remain in the stack, and they can be extended till the end
         while (!stack.isEmpty()) {
             Pair pop = stack.pollLast();
             maxArea = Integer.max(maxArea, pop.val * (heights.length - pop.index));//because this element will be extended till the end

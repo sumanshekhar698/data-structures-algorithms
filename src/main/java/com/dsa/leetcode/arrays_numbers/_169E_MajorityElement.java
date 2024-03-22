@@ -88,12 +88,12 @@ public class _169E_MajorityElement {
 
         }
 
-//        can also do a verification by calculating the frequency of the majorElement to be sure cause
+//        can also do verification by calculating the frequency of the majorElement to be sure cause
 //        if there are no majorElement this will just give a candidate element
         return majorElement;
     }
 
-    public static int optimizedUsingMVA(int[] nums) {
+    public static int optimizedUsingMVA(int[] nums) {//1, 2, 2, 1, 1, 2, 2
 //        Boyer-Moore Voting Algorithm
 
         //        Space : O(1)
