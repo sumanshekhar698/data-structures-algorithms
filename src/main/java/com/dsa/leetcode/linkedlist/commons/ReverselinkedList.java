@@ -17,7 +17,7 @@ public class ReverselinkedList {
     public static ListNode reverseLinkedList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
-        ListNode next = null;
+        ListNode next;
 
         while (curr != null) {
             next = curr.next;//save next
@@ -28,7 +28,7 @@ public class ReverselinkedList {
             curr = next;//eventually curr will become null
         }
 
-        return null;
+        return prev;
     }
 
 
