@@ -19,7 +19,7 @@ public class Panagram {
 
     public static void main(String[] args) {
 
-        Set<Character> set = new LinkedHashSet<>() {{
+        Set<Character> set = new LinkedHashSet() {{
             add('a');
             add('b');
             add('c');

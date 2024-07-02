@@ -28,7 +28,7 @@ public class _2192AllAncestorsOfANodeInADirectedAcyclicGraph {
             int source = edge[0];
             int target = edge[1];
             if (immediateParentsArray[target] == null) {
-                immediateParentsArray[target] = new TreeSet<>() {{
+                immediateParentsArray[target] = new TreeSet() {{
                     add(source);
                 }};
             } else {

@@ -43,7 +43,7 @@ public class _219ContainsDuplicateII {
                 map.get(nums[i]).add(i);
             } else {
                 int finalI = i;
-                map.put(nums[i], new ArrayList<>() {{
+                map.put(nums[i], new ArrayList() {{
                     add(finalI);
                 }});
             }
