@@ -1,4 +1,4 @@
-package com.dsa.leetcode.strings;
+package com.dsa.leetcode.stack;
 
 import java.util.ArrayDeque;
 
