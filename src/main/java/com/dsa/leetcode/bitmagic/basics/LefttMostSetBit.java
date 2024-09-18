@@ -1,4 +1,4 @@
-package com.dsa.leetcode.bitmagic;
+package com.dsa.leetcode.bitmagic.basics;
 
 public class LefttMostSetBit {
 
