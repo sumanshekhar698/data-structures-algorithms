@@ -1,4 +1,4 @@
-package com.dsa.recursion;
+package com.dsa.leetcode.recursion.basics;
 
 public class FibonacciUsingRecursion {
 
