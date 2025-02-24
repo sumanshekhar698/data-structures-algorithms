@@ -18,7 +18,7 @@ public class ArrayDeclaration {
 
        
     // Inserting the Elements
-    hm1.put(new Integer(1), "Geeks");
+    hm1.put(1, "Geeks");
 	}
 
 	
