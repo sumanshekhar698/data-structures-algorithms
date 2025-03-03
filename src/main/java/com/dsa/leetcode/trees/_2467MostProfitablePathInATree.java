@@ -5,8 +5,9 @@ import java.util.*;
 public class _2467MostProfitablePathInATree {
     public static void main(String[] args) {
         _2467MostProfitablePathInATree mostProfitablePathInATree = new _2467MostProfitablePathInATree();
-        int amount[] = {-2, 4, 2, -4, 6}, bob = 3;
         int[][] edges = {{0, 1}, {1, 2}, {1, 3}, {3, 4}};
+        int bob = 3;
+        int[] amount = {-2, 4, 2, -4, 6};
         int result = mostProfitablePathInATree.mostProfitablePath(edges, bob, amount);
         System.out.println(result);
     }
@@ -35,7 +36,6 @@ public class _2467MostProfitablePathInATree {
             adjacencyMap.computeIfAbsent(edge[0], k -> new ArrayList<>()).add(edge[1]);
             adjacencyMap.computeIfAbsent(edge[1], k -> new ArrayList<>()).add(edge[0]);
         }
-
 
 //        2. Bob Simulation first as bob has no choices
         HashMap<Integer, Integer> bobTimings = new HashMap<>();//node on a root path: time
