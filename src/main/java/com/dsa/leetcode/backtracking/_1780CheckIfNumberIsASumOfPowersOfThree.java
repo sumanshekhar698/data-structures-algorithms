@@ -11,16 +11,27 @@ public class _1780CheckIfNumberIsASumOfPowersOfThree {
 
     public boolean checkPowersOfThree(int n) {
 
+
         int i = 0;
 
 //        1. Find largest i such that 3^1 <= n
-        while (n >= (int) (Math.pow(3, i))) {
+
+        /*
+        * 3^i >= n this constraint say i is such that 3^i is equal to n or just greater than n
+        * => log3 3^i >= log3 n
+        * => i >= log3 n
+        * => ~ i = log3 n
+        *
+        * */
+        while (n >= (int) (Math.pow(3, i))) {// O(n) log3 (n)
             i++;
         }
         --i;// as 'i' is incremented one extra time after the above while loops breaks
 
 //        2. Greedy, Remove Largest Powers
         int n$ = n;
+
+        // O(n) log3 (n)
         while (i >= 0) {// wea re going from i to 0 as we cannot form the number without including the tha largest number
             int pow = (int) (Math.pow(3, i));
             if (pow <= n$) {
@@ -41,6 +52,7 @@ public class _1780CheckIfNumberIsASumOfPowersOfThree {
 
     public boolean checkPowersOfThreeUsingBackTracking(int n) {
 
+//        O(n) 2^(log3 n)  that is < 2^(log2 n) so 2^(log3 n) < n
         class Check {
             boolean check(int i, int currSum) {
                 if (currSum == n) {//this condition should be above the second if condition as is currSum = n then also (currSum + Math.pow(3, i)) > n) =>  true
