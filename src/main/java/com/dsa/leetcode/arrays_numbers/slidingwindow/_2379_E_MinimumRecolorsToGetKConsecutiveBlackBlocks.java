@@ -1,6 +1,6 @@
-package com.dsa.leetcode.arrays_numbers;
+package com.dsa.leetcode.arrays_numbers.slidingwindow;
 
-public class _2379_M_MinimumRecolorsToGetKConsecutiveBlackBlocks {
+public class _2379_E_MinimumRecolorsToGetKConsecutiveBlackBlocks {
 
     public static void main(String[] args) {
         String block = "WWBBBWBBBBBWWBWWWB";
