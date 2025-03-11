@@ -35,7 +35,7 @@ public class _3LongestSubstringWithoutRepeatingCharacters {
                     --len;
                 }
 //                set.add(ch);//no need to add as we are a not removing in the if part
-                ++len;//incrementing length to make it for adding the lates ch
+                ++len;//incrementing length to make it for adding the latest ch
             }
             maxLen = Integer.max(len, maxLen);
         }

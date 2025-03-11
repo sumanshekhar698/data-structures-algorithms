@@ -40,7 +40,7 @@ public class _3306_M_CountOfSubstringsContainingEveryVowelAndKConsonants {
                             vowelCountMap.remove(word.charAt(i));
                         }
 
-                        ++i;
+                        ++i;//shrinking the window from left
                     }
 
                 }
