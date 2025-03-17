@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class _2206DivideArrayIntoEqualPairs {
 
-    public boolean divideArrayOptimized(int[] nums) {
+    public boolean divideArrayOptimizedUsingSet(int[] nums) {
 
 
         HashSet<Integer> oddSet = new HashSet<>();
