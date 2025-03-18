@@ -18,7 +18,7 @@ public class _2401LongestNiceSubarray {
             xorSum ^= nums[j];
 
             while (xorSum != currentSum) {//window shrinking logic
-                //if Xor Sum == Current Sum :: they don't have set a bit at the same position ::
+                //if Xor Sum == Current Sum :: the numbers doesn't have a set bit have set a bit at the same position ::
                 currentSum -= nums[i];
                 xorSum ^= nums[i];//xoring again to remove the nums[i] impact :: x^x = 0
                 ++i;
