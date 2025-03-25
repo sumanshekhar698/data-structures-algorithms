@@ -30,8 +30,8 @@ public class _3169_M_CountDaysWithoutMeetings {
             int range = end - start + 1;
             days -= Math.max(range, 0);//subtraction of the non overlapping meeting days
 
-            Math.max(range, 0)
-/*        this code handles the case where a interval is dolled in a different interval,
+
+/*        Math.max(range, 0) --> this code handles the case where a interval is dolled in a different interval,
           in that case the startDay will be after end day, resulting to a -ve range.
           so if the range is -ve, this will always result to 0 that is no change in days*/
 
