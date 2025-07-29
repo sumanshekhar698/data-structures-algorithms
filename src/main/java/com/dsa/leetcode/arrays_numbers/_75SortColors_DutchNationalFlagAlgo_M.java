@@ -1,6 +1,5 @@
 package com.dsa.leetcode.arrays_numbers;
 
-import com.dsa.util.ArrayUtil;
 
 import java.util.Arrays;
 
@@ -85,6 +84,24 @@ public class _75SortColors_DutchNationalFlagAlgo_M {
             }
         }
 
+    }
+
+    class ArrayUtil {
+
+        public static void swap(int[] arr, int i, int j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+
+        public static void reverse(int[] arr, int start, int end) {
+            while (start < end) {
+                swap(arr, start, end);
+                start++;
+                end--;
+            }
+        }
     }
 
 

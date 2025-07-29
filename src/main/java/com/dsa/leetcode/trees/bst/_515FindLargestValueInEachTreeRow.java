@@ -30,7 +30,7 @@ public class _515FindLargestValueInEachTreeRow {
     class Solution {
 
 
-        public List<Integer> averageOfLevels(TreeNode root) {
+        public List<Integer> largestValues(TreeNode root) {
 
             // basically, we will count the number of levels
 //            O(n) ::  n => n is the number of nodes

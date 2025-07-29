@@ -31,7 +31,7 @@ public class _42TrappingRainWater {
                 maxWater += (water > 0) ? water : 0;//if water is -ve then we don't need to add it
                 maxL = Math.max(height[i], maxL);//update maxL before next iteration
             } else {
-                j--;////shifting j towards left at starting only as the extreme positions cannot hold any water
+                j--;//shifting j towards left at starting only as the extreme positions cannot hold any water
                 int water = maxR - height[j];
                 maxWater += (water > 0) ? water : 0;
                 maxR = Math.max(height[j], maxR);

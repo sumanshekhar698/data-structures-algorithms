@@ -16,11 +16,11 @@ public class _322CoinChange {
         int[] dp = new int[amount + 1];//0->amount
         Arrays.fill(dp, Integer.MAX_VALUE - 1);//default values Integer.MAX_VALUE - 1 {-1 to prevent Integer rotation once we add a number to it}
 //        Arrays.fill(dp, amount +1);//or simple take amount +1
-        dp[0] = 0;//BASE Case
+        dp[0] = 0;//BASE Case means if we need to make amount to 0 we need 0 coins
 
 //       O Time : O(amount*len(coins))
 //       O Space : O(amount)
-        for (int i = 1; i <= amount; i++) {
+        for (int i = 1; i <= amount; i++) {// i is amount
             for (int coinValue : coin) {
                 if (i - coinValue >= 0) {
                     dp[i] = Math.min(dp[i], 1 + dp[i - coinValue]);//means min(current coins, 1 coin+dp[amount - currentCoinValue])

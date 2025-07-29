@@ -2,6 +2,7 @@ package com.dsa.leetcode.heap;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.PriorityQueue;
 
 class _347TopKFrequentElements {
@@ -35,6 +36,7 @@ class _347TopKFrequentElements {
         // Get the top k frequent elements
         int[] result = new int[k];
         for (int i = 0; i < k; i++) {
+//            result[i] = Objects.requireNonNull(pq.poll()).getKey();//fetching the key from the entry
             result[i] = pq.poll().getKey();//fetching the key from the entry
         }
 

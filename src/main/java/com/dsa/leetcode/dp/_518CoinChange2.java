@@ -32,7 +32,7 @@ public class _518CoinChange2 {
             }
         }
 
-        return dp[amount] == Integer.MAX_VALUE - 1 ? -1 : dp[amount];
+        return dp[amount] == amount + 1 ? -1 : dp[amount];
 
     }
 }

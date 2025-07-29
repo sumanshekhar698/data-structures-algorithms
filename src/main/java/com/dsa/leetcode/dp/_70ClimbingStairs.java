@@ -19,7 +19,7 @@ public class _70ClimbingStairs {
 
         int[] dp = new int[n + 1];
 
-        dp[dp.length - 1] = 1;//At the last n; thers is only 1 way, 0 steps
+        dp[dp.length - 1] = 1;//At the last n; there is only 1 way, 0 steps
         dp[dp.length - 2] = 1;//At second last there is only 1 way 1 step of 1 unit
 
         for (int i = dp.length - 3; i >= 0; i--) {//Bottom Approach fpr DP

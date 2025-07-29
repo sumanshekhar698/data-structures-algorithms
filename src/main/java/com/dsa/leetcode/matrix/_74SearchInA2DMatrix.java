@@ -14,18 +14,18 @@ public class _74SearchInA2DMatrix {
 		
 		int n = x.length;//rows
 		int m = x[0].length;//columns
-		
+
 //		int i = 0, j = x.length - 1;
 		int i = 0, j = x[0].length - 1;
 
 //		Only applicable for fully sorted matrix
 //		O(n) = n + m = n
-		
+
 		while (i < x.length && j >= 0) {
 			if (x[i][j] == item) {
 				System.out.println("Item Found -> [" + i + " " + j + "]");
 				break;
-			} else if (x[i][j] > item)
+			} else if (item < x[i][j])
 				j--;
 			else
 				i++;
