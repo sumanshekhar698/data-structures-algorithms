@@ -7,9 +7,9 @@ public class _15BuyStocksAndSell {
 
     public static void main(String[] args) {
         int[] inputPrice = {7, 1, 5, 3, 6, 4};
-//		A single day price will  not give you any profit
-        // A descending array will always give us LOSS So profit = 0
-        // A ascending array will always give us PROFIT = final-initial
+//		A single-day price will not give you any profit
+//      A descending array will always give us LOSS: So profit = 0
+//      An ascending array will always give us PROFIT = final-initial
 
         System.out.println("Original ==> " + Arrays.toString(inputPrice));
         int profit = maxProfitNaive(inputPrice, 0, inputPrice.length - 1);

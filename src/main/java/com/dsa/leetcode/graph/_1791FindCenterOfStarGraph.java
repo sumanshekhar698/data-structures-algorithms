@@ -18,8 +18,8 @@ public class _1791FindCenterOfStarGraph {
         return edge1[0] == edge2[0] || edge1[0] == edge2[1] ? edge1[0] : edge1[1];
     }
 
-    static public int findCenterUsingComonPointHasSet(int[][] edges) {
-        //evey number in the 1D array is a node
+    static public int findCenterUsingCommonPointHasSet(int[][] edges) {
+        //every number in the 1D array is a node
 
         Set<Integer> nodesTraversed = new HashSet<Integer>();
 //        Set<Integer> nodesTraversed = new HashSet<Integer>();

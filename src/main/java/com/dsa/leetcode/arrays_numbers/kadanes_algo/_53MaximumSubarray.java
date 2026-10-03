@@ -9,7 +9,7 @@ public class _53MaximumSubarray {
 
     public int maxSubArray(int[] nums) {
 
-        int sum = nums[0];//will have atleast one element
+        int sum = nums[0];//will have at least one element
         int max = sum;
         for (int i = 1; i < nums.length; i++) {
             sum = Integer.max(nums[i], sum + nums[i]);// max of current element + previous max + current element

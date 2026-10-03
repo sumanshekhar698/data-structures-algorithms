@@ -18,7 +18,7 @@ public class _209MinimumSizeSubarraySum {
         int sum = 0, result = Integer.MAX_VALUE;
 
         // [{2, 3, 1, 2, 4, 3]
-        for (int j = 0; j < nums.length; j++) {//this loop wil kep on extending the right side of a window in the hope we find a smaller window size
+        for (int j = 0; j < nums.length; j++) {//this loop will keep on extending the right side of a window in the hope we find a smaller window size
             sum += nums[j];
 
             //we have a loop there as going forward in the arrays we can found a window with far shorter size
