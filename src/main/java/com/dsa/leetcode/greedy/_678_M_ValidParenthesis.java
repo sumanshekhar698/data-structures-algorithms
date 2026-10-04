@@ -16,7 +16,9 @@ public class _678_M_ValidParenthesis {
         return dfsMemoized(s, 0, 0);
     }
 
-
+    //    Greedy doesn't choose one interpretation of *. It keeps enough information (min and max)
+//    to represent all three possibilities without exploring them individually.
+    //Among the surviving possibilities, can at least one finish with exactly 0 balance?
     public boolean checkValidStringGreedy(String s) {
 
         int minBalance = 0;
