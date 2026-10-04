@@ -1,5 +1,6 @@
 package com.dsa.leetcode.stack;
 
+import java.util.ArrayDeque;
 import java.util.Stack;
 
 public class _20ValidParentheses {
@@ -8,9 +9,9 @@ public class _20ValidParentheses {
 
     }
 
-    class Solution {
+    static class Solution {
         public boolean isValid(String s) {
-            Stack<Character> stack = new Stack<Character>();
+            ArrayDeque<Character> stack = new ArrayDeque<>();
 
             for (int i = 0; i < s.length(); i++) {
                 char ch = s.charAt(i);
@@ -18,7 +19,7 @@ public class _20ValidParentheses {
                     stack.push(ch);// push every opening bracket to the stack
                 else {
                     if (stack.isEmpty())
-                        return false;// for a closing bracket if the stack is empty return unbalanced
+                        return false;// for a closing bracket if the stack is empty, return unbalanced
                     char top = stack.pop();
                     if ((top == '(' && ch == ')') || (top == '[' && ch == ']') || (top == '{' && ch == '}'))// matching ossible correct pairs
                         continue;
@@ -27,7 +28,7 @@ public class _20ValidParentheses {
                 }
             }
 
-            return stack.isEmpty();// if yes : balanced else unbalanced
+            return stack.isEmpty();// if yes: balanced else unbalanced
         }
     }
 }
